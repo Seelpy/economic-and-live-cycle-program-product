@@ -35,6 +35,15 @@ jobs:
           npm run build
           npm run postbuild-linux
 
+      - name: Create .nojekyll file
+        run: touch ./dist/.nojekyll
+
+      - name: Add proper MIME types configuration
+        run: |
+          echo "/*.js    application/javascript" > ./dist/_headers
+          echo "/*.mjs   application/javascript" >> ./dist/_headers
+          echo "/*.wasm  application/wasm" >> ./dist/_headers
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
