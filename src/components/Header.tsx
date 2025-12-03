@@ -18,8 +18,8 @@ const Header = () => {
 			<div className="container">
 				<div className="header-content">
 					<Link to="/" className="logo" onClick={closeMenu}>
-						<span className="logo-icon">🎯</span>
-						Learn+
+						<span className="logo-icon">🎓</span>
+						СтудентЛайф
 					</Link>
 
 					<nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

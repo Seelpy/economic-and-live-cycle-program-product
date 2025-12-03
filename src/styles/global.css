@@ -6,18 +6,18 @@
 }
 
 :root {
-    --primary-color: #10b981;
-    --primary-dark: #059669;
-    --primary-light: #34d399;
-    --secondary-color: #6366f1;
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --secondary-color: #7c3aed;
     --accent-color: #f59e0b;
-    --accent-gradient: linear-gradient(135deg, #10b981 0%, #6366f1 100%);
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
+    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    --text-dark: #1e293b;
+    --text-light: #64748b;
     --background: #ffffff;
-    --background-light: #f9fafb;
-    --background-gradient: linear-gradient(135deg, #10b981 0%, #6366f1 100%);
-    --border-color: #e5e7eb;
+    --background-light: #f8fafc;
+    --background-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    --border-color: #e2e8f0;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -177,12 +177,12 @@ body {
 .btn-primary {
     background: var(--accent-gradient);
     color: white;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
 }
 
 .btn-secondary {
@@ -208,7 +208,7 @@ body {
 .btn-secondary:hover {
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary:hover::after {
@@ -218,7 +218,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 50%, #f0f9ff 100%);
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 50%, #f5f3ff 100%);
     position: relative;
     overflow: hidden;
 }
@@ -252,6 +252,13 @@ body {
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
 .hero-content h1 {
@@ -513,12 +520,12 @@ body {
 }
 
 .structure-card.advantage {
-    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-    border-left: 4px solid var(--success-color);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 4px solid var(--primary-color);
 }
 
 .structure-card.disadvantage {
-    background: linear-gradient(135deg, #fef2f2 0%, #fef2f2 100%);
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     border-left: 4px solid var(--warning-color);
 }
 
@@ -828,7 +835,7 @@ body {
     outline: none;
     border-color: var(--primary-color);
     background: white;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .success-message {
@@ -966,23 +973,138 @@ body {
         border-bottom: none;
     }
 
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 80px 0 50px;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-media {
+        order: 2;
+    }
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 
     .hero-stats {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .stat {
+        min-width: 100px;
+    }
+
+    .stat strong {
+        font-size: 1.5rem;
+    }
+
+    .stat span {
+        font-size: 0.85rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .platform-preview {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         max-width: 100%;
+        gap: 0.8rem;
+    }
+
+    .preview-item {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .target-audience,
+    .features-preview,
+    .features-detail,
+    .pricing-section,
+    .marketing-section {
+        padding: 60px 0;
+    }
+
+    .target-audience h2,
+    .features-preview h2,
+    .features-detail h2,
+    .pricing-section h2,
+    .marketing-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .audience-grid,
+    .features-grid,
+    .pricing-grid,
+    .marketing-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .features-grid.detailed {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card,
+    .feature-card,
+    .pricing-card,
+    .marketing-item,
+    .info-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .feature-card.detailed {
+        padding: 2rem 1.5rem;
+    }
+
+    .structure-content {
+        padding: 60px 0;
+    }
+
+    .structure-intro {
+        margin-bottom: 3rem;
+    }
+
+    .structure-intro h2 {
+        font-size: 2rem;
+    }
+
+    .structure-intro p {
+        font-size: 1.1rem;
     }
 
     .structure-comparison {
@@ -990,88 +1112,258 @@ body {
         gap: 2rem;
     }
 
+    .structure-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .company-info h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        padding: 60px 0;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
 
-    .features-grid.detailed {
-        grid-template-columns: 1fr;
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
-    .feature-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .feature-card.detailed {
-        padding: 2.5rem 2rem;
+    .contact-item {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
     .contact-form {
-        padding: 2rem;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    .hero {
-        padding: 100px 0 60px;
-    }
-
-    .features-preview,
-    .features-detail {
-        padding: 80px 0;
+        padding: 2rem 1.5rem;
     }
 
     .page-header {
-        padding: 80px 0 60px;
-    }
-
-    .cta-section {
-        padding: 80px 0;
-    }
-
-    .target-audience,
-    .pricing-section,
-    .marketing-section {
-        padding: 80px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .feature-card {
-        padding: 1.5rem;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.95rem;
+        padding: 80px 0 50px;
     }
 
     .page-header h1 {
         font-size: 2.2rem;
     }
 
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 70px 0 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .stat strong {
+        font-size: 1.8rem;
+    }
+
+    .stat span {
+        font-size: 0.8rem;
+    }
+
+    .platform-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-item {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .target-audience,
+    .features-preview,
+    .features-detail,
+    .pricing-section,
+    .marketing-section,
+    .structure-content {
+        padding: 50px 0;
+    }
+
+    .target-audience h2,
+    .features-preview h2,
+    .features-detail h2,
+    .pricing-section h2,
+    .marketing-section h2,
+    .structure-intro h2,
+    .company-info h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .audience-card,
+    .feature-card,
+    .pricing-card,
+    .marketing-item,
+    .info-card,
+    .structure-card {
+        padding: 1.5rem;
+    }
+
+    .feature-card h3,
+    .audience-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        min-height: 60px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    .page-header {
+        padding: 70px 0 40px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .contact-content {
+        padding: 50px 0;
+    }
+
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-item strong {
+        font-size: 1rem;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+
     .contact-form {
         padding: 1.5rem;
     }
 
-    .structure-card,
-    .info-card,
-    .marketing-item {
-        padding: 1.5rem;
+    .contact-form h3 {
+        font-size: 1.5rem;
     }
 
-    .pricing-card {
-        padding: 2rem 1.5rem;
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.3rem;
     }
 }

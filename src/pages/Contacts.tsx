@@ -6,7 +6,7 @@ const Contacts: React.FC = () => (
 		<section className="page-header">
 			<div className="container">
 				<h1>Свяжитесь с нами</h1>
-				<p>Готовы показать как Learn+ решит ваши задачи в обучении персонала</p>
+				<p>Готовы обсудить внедрение "СтудентЛайф" в ваш университет</p>
 			</div>
 		</section>
 
@@ -17,27 +17,27 @@ const Contacts: React.FC = () => (
 						<h3>Контактная информация</h3>
 						<div className="contact-item">
 							<strong>Компания:</strong>
-							<p>ООО "Айсаммер"</p>
+							<p>ООО "Кампус-Тех"</p>
 						</div>
 						<div className="contact-item">
 							<strong>Телефон:</strong>
-							<p>+7 (495) 123-45-69</p>
+							<p>+7 (495) 123-45-67</p>
 						</div>
 						<div className="contact-item">
 							<strong>Email:</strong>
-							<p>sales@learn-platform.ru</p>
+							<p>sales@campus-tech.ru</p>
 						</div>
 						<div className="contact-item">
 							<strong>Техподдержка:</strong>
-							<p>support@learn-platform.ru</p>
+							<p>support@campus-tech.ru</p>
 						</div>
 						<div className="contact-item">
 							<strong>Время работы:</strong>
-							<p>Пн-Пт: 10:00-18:00</p>
+							<p>Пн-Пт: 9:00-18:00</p>
 						</div>
 						<div className="contact-item">
-							<strong>Для партнеров:</strong>
-							<p>partners@learn-platform.ru</p>
+							<strong>Для тендеров:</strong>
+							<p>tenders@campus-tech.ru</p>
 						</div>
 					</div>
 					<div className="contact-form-wrapper">
